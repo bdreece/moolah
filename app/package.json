@@ -1,7 +1,10 @@
 {
   "name": "app",
+  "author": "Brian Reece",
+  "description": "A simple budgeting app",
+  "license": "AGPLv3",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
