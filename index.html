@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">moolah</a></h1>
+    </header>
+
+    <main>
+        <div>
+            <h2>Incomes</h2>
+            <canvas is="pie-chart" id="incomes" height="320" width="320"></canvas>
+        </div>
+
+        <div>
+            <h2>Expenses</h2>
+            <canvas is="pie-chart" id="expenses" height="320" width="320"></canvas>
+        </div>
+
+        <transaction-form data-target="#incomes">
+            <ul></ul>
+            <b></b>
+
+            <form>
+                <input type="text" name="description" placeholder="Description" />
+
+                <input type="number" min="0" max="999999" step="0.01" name="amount" placeholder="Amount" />
+
+                <div class="spacer"></div>
+
+                <button type="submit">
+                    Add
+                </button>
+            </form>
+        </transaction-form>
+
+        <transaction-form data-target="#expenses">
+            <ul></ul>
+            <b></b>
+
+            <form>
+                <input type="text" name="description" placeholder="Description" />
+
+                <input type="number" min="0" max="999999" step="0.01" name="amount" placeholder="Amount" />
+
+                <div class="spacer"></div>
+
+                <button type="submit">
+                    Add
+                </button>
+            </form>
+        </transaction-form>
+    </main>
+
+    <footer>
+        Copyright &copy; 2023 Brian Reece
+    </footer>
+
+    <script type="module" src="/index.js"></script>
+</body>
+
+</html>
