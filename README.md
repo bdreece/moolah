@@ -1,0 +1,3 @@
+# moolah
+
+basic budgeting
