@@ -7,15 +7,18 @@
 
 main {
     display: grid;
+    min-height: 100vh;
+    max-width: 100vw;
     gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
-main > div, ul, transaction-form {
-    width: 480px;
+section {
+    grid-column: 1 / span 2;
 }
 
 canvas {
+    width: min(480px, 90vw);
     margin-inline: auto;
 }
 
@@ -27,9 +30,12 @@ li {
     list-style: none;
 }
 
+form, .transaction {
+    gap: 0.5rem;
+}
+
 form {
     display: flex;
-    gap: 0.5rem;
 }
 
 footer {
@@ -38,7 +44,6 @@ footer {
 
 .transaction {
     display: flex;
-    gap: 0.5rem;
     height: 2rem;
     justify-content: space-between;
     align-items: center;
@@ -46,4 +51,11 @@ footer {
 
 .spacer {
     flex: 1;
+}
+
+@media screen and (max-width: 640px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 }
